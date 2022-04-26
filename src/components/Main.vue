@@ -3,6 +3,7 @@
     <Place />
     <Reviews />
     <Specials />
+    <PizzaBuild />
   </main>
 </template>
 
@@ -10,6 +11,7 @@
 import Place from "@/components/Place.vue";
 import Reviews from "@/components/Reviews.vue";
 import Specials from "@/components/Specials.vue";
+import PizzaBuild from "@/components/PizzaBuild.vue";
 
 export default {
   name: "MainComponent",
@@ -17,6 +19,7 @@ export default {
     Place,
     Reviews,
     Specials,
+    PizzaBuild,
   },
 };
 </script>
