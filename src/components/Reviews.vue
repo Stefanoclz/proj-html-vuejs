@@ -69,7 +69,7 @@ section {
         width: 10px;
         height: 10px;
         border: none;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
     }
   }
