@@ -5,6 +5,25 @@
     <Specials />
     <PizzaBuild />
     <People />
+    <div class="sponsor">
+      <div class="container">
+        <div class="brand">
+          <img src="@/assets/data/img/h1-clients-img-4.png" alt="Cowboy" />
+        </div>
+        <div class="brand">
+          <img src="@/assets/data/img/h1-clients-img-3.png" alt="Gordon" />
+        </div>
+        <div class="brand">
+          <img src="@/assets/data/img/h1-clients-img-1.png" alt="Big Cheese" />
+        </div>
+        <div class="brand">
+          <img src="@/assets/data/img/h1-clients-img-2.png" alt="Bludoos Bar" />
+        </div>
+        <div class="brand">
+          <img src="@/assets/data/img/h1-clients-img-5.png" alt="Vegan" />
+        </div>
+      </div>
+    </div>
   </main>
 </template>
 
@@ -27,5 +46,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped lang="scss">
+.sponsor {
+  background-color: #f7f7f2;
+  margin-bottom: 10px;
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    column-gap: 2%;
+    padding: 50px 0px;
+
+    .brand {
+      width: calc(100% / 5) - 2%;
+    }
+  }
+}
 </style>
