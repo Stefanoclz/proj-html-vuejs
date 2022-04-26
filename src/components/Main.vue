@@ -1,9 +1,18 @@
 <template>
-  <main></main>
+  <main>
+    <Place />
+  </main>
 </template>
 
 <script>
-export default {};
+import Place from "@/components/Place.vue";
+
+export default {
+  name: "MainComponent",
+  components: {
+    Place,
+  },
+};
 </script>
 
 <style>

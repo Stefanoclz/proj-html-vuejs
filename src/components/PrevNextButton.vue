@@ -24,7 +24,7 @@ h4 {
 .btn-right {
   position: absolute;
   top: 50%;
-  right: -15px;
+  right: -10px;
   transform: rotate(-90deg);
   border-radius: 50px 50px 0px 0px;
   padding: 15px 10px 0px 10px;
@@ -36,7 +36,7 @@ h4 {
 
 .btn-left {
   position: absolute;
-  left: -15px;
+  left: -10px;
   top: 50%;
   transform: rotate(90deg);
   border-radius: 50px 50px 0px 0px;
