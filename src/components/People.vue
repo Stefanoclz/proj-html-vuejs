@@ -1,60 +1,15 @@
 <template>
   <section>
-    <div class="card">
+    <div class="card" v-for="person in allStaff" :key="person.id">
       <img
         class="foto"
-        src="@/assets/data/img/h1-team-1a-700x700.jpg"
+        :src="require(`@/assets/data/img/h1-team-${person.link}.jpg`)"
         alt="people 1"
       />
       <div class="container">
         <div class="bio">
-          <h1>ESTEBAN RODRIGUEZ</h1>
-          <p>Manager</p>
-          <div class="social">
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="foto" src="@/assets/data/img/h1-team-2a.jpg" alt="people 1" />
-      <div class="container">
-        <div class="bio">
-          <h1>REBECCA PALMER</h1>
-          <p>Recruiter</p>
-          <div class="social">
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="foto" src="@/assets/data/img/h1-team-4a.jpg" alt="people 1" />
-      <div class="container">
-        <div class="bio">
-          <h1>JASON COOPER</h1>
-          <p>Chef</p>
-          <div class="social">
-            <i class="fa-brands fa-instagram-square"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-facebook-f"></i>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img class="foto" src="@/assets/data/img/h1-team-3a.jpg" alt="people 1" />
-      <div class="container">
-        <div class="bio">
-          <h1>ESTELLE LAMBERT</h1>
-          <p>Chief Operator</p>
+          <h1>{{ person.name }}</h1>
+          <p>{{ person.role }}</p>
           <div class="social">
             <i class="fa-brands fa-instagram-square"></i>
             <i class="fa-brands fa-twitter"></i>
@@ -69,6 +24,36 @@
 <script>
 export default {
   name: "peopleItem",
+  data() {
+    return {
+      allStaff: [
+        {
+          link: "1a-700x700",
+          name: "ESTEBAN RODRIGUEZ",
+          role: "Manager",
+          id: 1,
+        },
+        {
+          link: "2a",
+          name: "REBECCA PALMER",
+          role: "Recruiter",
+          id: 2,
+        },
+        {
+          link: "3a",
+          name: "JASON COOPER",
+          role: "Chef",
+          id: 3,
+        },
+        {
+          link: "4a",
+          name: "ESTELLE LAMBERT",
+          role: "Chief Operator",
+          id: 4,
+        },
+      ],
+    };
+  },
 };
 </script>
 
