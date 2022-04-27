@@ -1,5 +1,5 @@
 <template>
-  <div class="containerPizze">
+  <div class="containerPizze" @mousedown="dragList($event)">
     <div class="card">
       <img
         src="@/assets/data/img/h3-product-img-1a-100x100.png"
@@ -62,6 +62,16 @@
 <script>
 export default {
   name: "pizzaSlider",
+  data() {
+    return {
+      evento: "",
+    };
+  },
+  methods: {
+    dragList($event) {
+      console.log("test", $event.offsetX);
+    },
+  },
 };
 </script>
 
