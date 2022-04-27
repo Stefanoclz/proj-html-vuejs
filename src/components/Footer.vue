@@ -70,17 +70,13 @@
         </div>
 
         <div class="credits">
-          <div class="container">
+          <div class="container-credits">
             <p>Created with <i class="fa-solid fa-heart"></i> by SC</p>
           </div>
         </div>
       </div>
-      <div class="hystory-foto">
-        <img
-          src="@/assets/data/img/footer-img-1.jpg"
-          alt="old time restaurant"
-        />
-      </div>
+
+      <img src="@/assets/data/img/footer-img-1.jpg" alt="old time restaurant" />
     </div>
   </footer>
 </template>
@@ -102,6 +98,7 @@ export default {
   background-color: #1b1b1b;
   color: white;
   text-align: left;
+  margin-bottom: 0px;
 
   .info {
     display: flex;
@@ -138,14 +135,9 @@ export default {
     }
   }
 
-  .hystory-foto {
+  img {
     width: calc(100% / 2);
-    height: 100%;
-
-    img {
-      width: 100%;
-      object-fit: fill;
-    }
+    object-fit: fill;
   }
 }
 
@@ -160,7 +152,12 @@ export default {
 
 .container {
   width: 85%;
-  margin: 100px auto;
+  margin: 150px auto;
+}
+
+.container-credits {
+  width: 85%;
+  margin: 40px auto 30px auto;
 }
 
 .credits {
