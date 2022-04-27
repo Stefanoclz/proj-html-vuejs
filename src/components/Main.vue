@@ -25,6 +25,7 @@
       </div>
     </div>
     <ChoosePizza />
+    <Events />
   </main>
 </template>
 
@@ -35,6 +36,7 @@ import Specials from "@/components/Specials.vue";
 import PizzaBuild from "@/components/PizzaBuild.vue";
 import People from "@/components/People.vue";
 import ChoosePizza from "@/components/ChoosePizza.vue";
+import Events from "@/components/Events.vue";
 
 export default {
   name: "MainComponent",
@@ -45,6 +47,7 @@ export default {
     PizzaBuild,
     People,
     ChoosePizza,
+    Events,
   },
 };
 </script>
