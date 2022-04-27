@@ -33,6 +33,7 @@ export default {
   data() {
     return {
       sliceId: 1,
+      clock: undefined,
     };
   },
   methods: {
@@ -48,6 +49,13 @@ export default {
         this.sliceId = 1;
       }
     },
+    SliceAutoPlay() {
+      this.clock = setInterval(this.NextSlice, 3000);
+      console.log(this.sliceId);
+    },
+  },
+  mounted() {
+    this.SliceAutoPlay();
   },
 };
 </script>
