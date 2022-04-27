@@ -11,9 +11,9 @@
         <h6>{{ review.author }}</h6>
       </div>
       <div class="buttons">
-        <button class="selected"></button>
-        <button class="notSelected"></button>
-        <button class="notSelected"></button>
+        <button :class="selectedButton(0)" @click="changeReview(0)" />
+        <button :class="selectedButton(1)" @click="changeReview(1)" />
+        <button :class="selectedButton(2)" @click="changeReview(2)" />
       </div>
     </div>
     <PrevNextButton @goBack="PrevReview" @goForward="NextReview" />
@@ -37,17 +37,14 @@ export default {
           review: `"FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW
         YORK-STYLE PIZZA SLICE IN NAPLES"`,
           author: "WASHINGTON POST 2018",
-          id: 1,
         },
         {
           review: `"THE CRUST IS SO TENDER IT BARELY FIGHTS FORK, KNIFE OR TEETH."`,
           author: "NEW YORK TIMES 2019",
-          id: 2,
         },
         {
           review: `"PROBABLY THE BEST RESTAURANT IN THE AREA, VERY GOOD AND VERY LIGHT PIZZA, PERFECT WELCOME"`,
           author: "DAILY POST 2020",
-          id: 3,
         },
       ],
     };
@@ -67,6 +64,22 @@ export default {
         console.log("review", this.reviewId);
       }
     },
+    selectedButton(x) {
+      if (this.reviewId === x) {
+        return "selected";
+      } else {
+        return "notSelected";
+      }
+    },
+    changeReview(x) {
+      this.reviewId = x;
+    },
+    ReviewAutoPlay() {
+      this.clock = setInterval(this.NextReview, 5000);
+    },
+  },
+  mounted() {
+    this.ReviewAutoPlay();
   },
 };
 </script>
