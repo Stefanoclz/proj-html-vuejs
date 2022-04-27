@@ -50,7 +50,7 @@ export default {
       }
     },
     SliceAutoPlay() {
-      this.clock = setInterval(this.NextSlice, 3000);
+      this.clock = setInterval(this.NextSlice, 10000);
       console.log(this.sliceId);
     },
   },

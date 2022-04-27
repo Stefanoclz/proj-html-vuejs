@@ -2,18 +2,21 @@
   <section>
     <div class="container">
       <i class="fa-solid fa-quote-left"></i>
-      <h3>
-        "FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW
-        YORK-STYLE PIZZA SLICE IN NAPLES"
-      </h3>
-      <h6>WASHINGTON POST 2018</h6>
+      <div
+        v-for="(review, index) in reviews"
+        :key="index"
+        v-show="reviewId === index"
+      >
+        <h3>{{ review.review }}</h3>
+        <h6>{{ review.author }}</h6>
+      </div>
       <div class="buttons">
         <button class="selected"></button>
         <button class="notSelected"></button>
         <button class="notSelected"></button>
       </div>
     </div>
-    <PrevNextButton />
+    <PrevNextButton @goBack="PrevReview" @goForward="NextReview" />
     <img src="@/assets/data/svg/svg-4.svg" alt="pizza slice" />
   </section>
 </template>
@@ -25,6 +28,45 @@ export default {
   name: "reviewsItem",
   components: {
     PrevNextButton,
+  },
+  data() {
+    return {
+      reviewId: 0,
+      reviews: [
+        {
+          review: `"FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW
+        YORK-STYLE PIZZA SLICE IN NAPLES"`,
+          author: "WASHINGTON POST 2018",
+          id: 1,
+        },
+        {
+          review: `"THE CRUST IS SO TENDER IT BARELY FIGHTS FORK, KNIFE OR TEETH."`,
+          author: "NEW YORK TIMES 2019",
+          id: 2,
+        },
+        {
+          review: `"PROBABLY THE BEST RESTAURANT IN THE AREA, VERY GOOD AND VERY LIGHT PIZZA, PERFECT WELCOME"`,
+          author: "DAILY POST 2020",
+          id: 3,
+        },
+      ],
+    };
+  },
+  methods: {
+    PrevReview() {
+      this.reviewId--;
+      if (this.reviewId < 0) {
+        this.reviewId = 2;
+        console.log("review", this.reviewId);
+      }
+    },
+    NextReview() {
+      this.reviewId++;
+      if (this.reviewId > 2) {
+        this.reviewId = 0;
+        console.log("review", this.reviewId);
+      }
+    },
   },
 };
 </script>
