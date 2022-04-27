@@ -1,17 +1,21 @@
 <template>
   <div>
-    <div class="btn-left">
-      <h4>PREV</h4>
-    </div>
-    <div class="btn-right">
-      <h4>NEXT</h4>
-    </div>
+    <button class="btn-left" @click="prevImage">PREV</button>
+    <button class="btn-right" @click="nextImage">NEXT</button>
   </div>
 </template>
 
 <script>
 export default {
   name: "buttonsItem",
+  methods: {
+    prevImage() {
+      this.$emit("goBack");
+    },
+    nextImage() {
+      this.$emit("goForward");
+    },
+  },
 };
 </script>
 

@@ -60,7 +60,6 @@ export default {
   methods: {
     separator(index) {
       const id = index;
-      console.log(id);
       if (id === 0 || id === 2) {
         return "eventName";
       } else {

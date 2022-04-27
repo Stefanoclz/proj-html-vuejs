@@ -1,8 +1,22 @@
 <template>
   <header>
     <Nav />
-    <img src="@/assets/data/img/h3-rev-img-6.png" alt="pizza slice" />
-    <PrevNextButton />
+    <img
+      v-if="sliceId === 1"
+      src="@/assets/data/img/h3-rev-img-2.png"
+      alt="pizza slice"
+    />
+    <img
+      v-if="sliceId === 2"
+      src="@/assets/data/img/h3-rev-img-4.png"
+      alt="pizza slice"
+    />
+    <img
+      v-if="sliceId === 3"
+      src="@/assets/data/img/h3-rev-img-6.png"
+      alt="pizza slice"
+    />
+    <PrevNextButton @goBack="PrevSlice" @goForward="NextSlice" />
   </header>
 </template>
 
@@ -15,6 +29,25 @@ export default {
   components: {
     Nav,
     PrevNextButton,
+  },
+  data() {
+    return {
+      sliceId: 1,
+    };
+  },
+  methods: {
+    PrevSlice() {
+      this.sliceId--;
+      if (this.sliceId < 1) {
+        this.sliceId = 3;
+      }
+    },
+    NextSlice() {
+      this.sliceId++;
+      if (this.sliceId > 3) {
+        this.sliceId = 1;
+      }
+    },
   },
 };
 </script>
