@@ -26,6 +26,7 @@
     </div>
     <ChoosePizza />
     <Events />
+    <Form />
   </main>
 </template>
 
@@ -37,6 +38,7 @@ import PizzaBuild from "@/components/PizzaBuild.vue";
 import People from "@/components/People.vue";
 import ChoosePizza from "@/components/ChoosePizza.vue";
 import Events from "@/components/Events.vue";
+import Form from "@/components/Form.vue";
 
 export default {
   name: "MainComponent",
@@ -48,6 +50,7 @@ export default {
     People,
     ChoosePizza,
     Events,
+    Form,
   },
 };
 </script>
