@@ -1,22 +1,24 @@
 <template>
   <header>
-    <Nav />
-    <img
-      v-if="sliceId === 1"
-      src="@/assets/data/img/h3-rev-img-2.png"
-      alt="pizza slice"
-    />
-    <img
-      v-if="sliceId === 2"
-      src="@/assets/data/img/h3-rev-img-4.png"
-      alt="pizza slice"
-    />
-    <img
-      v-if="sliceId === 3"
-      src="@/assets/data/img/h3-rev-img-6.png"
-      alt="pizza slice"
-    />
-    <PrevNextButton @goBack="PrevSlice" @goForward="NextSlice" />
+    <div class="container">
+      <Nav />
+      <img
+        v-if="sliceId === 1"
+        src="@/assets/data/img/h3-rev-img-2.png"
+        alt="pizza slice"
+      />
+      <img
+        v-if="sliceId === 2"
+        src="@/assets/data/img/h3-rev-img-4.png"
+        alt="pizza slice"
+      />
+      <img
+        v-if="sliceId === 3"
+        src="@/assets/data/img/h3-rev-img-6.png"
+        alt="pizza slice"
+      />
+      <PrevNextButton @goBack="PrevSlice" @goForward="NextSlice" />
+    </div>
   </header>
 </template>
 
@@ -65,10 +67,14 @@ header {
   background-color: rgba($color: #000000, $alpha: 0.9);
   color: white;
   padding: 20px 0px;
-  background-image: url(@/assets/data/img/h3-rev-img-5.png);
+  background-image: url(@/assets/data/img/sfondo3.jpg);
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+}
+
+.container {
+  background-color: url(@/assets/data/img/h3-rev-img-5.png);
 }
 
 img {

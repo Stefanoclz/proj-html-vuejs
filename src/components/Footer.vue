@@ -95,7 +95,7 @@ export default {
 <style scoped lang="scss">
 .bot-footer {
   display: flex;
-  background-color: #1b1b1b;
+  background-image: url(@/assets/data/img/sfondo3.jpg);
   color: white;
   text-align: left;
   margin-bottom: 0px;
@@ -152,7 +152,7 @@ export default {
 
 .container {
   width: 85%;
-  margin: 150px auto;
+  margin: 150px auto 80px auto;
 }
 
 .container-credits {

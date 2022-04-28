@@ -42,7 +42,7 @@ section {
 }
 
 .slice {
-  background-color: white;
+  background-color: #f6f7f2;
   width: 40px;
   padding: 7px 0px;
   border-radius: 50%;

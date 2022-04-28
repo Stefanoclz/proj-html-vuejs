@@ -11,7 +11,7 @@
         <div class="card" v-for="(pizza, index) in mainPizze" :key="index">
           <img
             :src="require(`@/assets/data/img/h3-product-img-${pizza.link}.png`)"
-            alt="pizza Bismarck"
+            :alt="pizza.name"
           />
           <div class="sold" v-if="pizza.sold === true">
             <h6>SOLD</h6>

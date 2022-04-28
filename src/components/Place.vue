@@ -68,6 +68,10 @@ section {
         border-radius: 50%;
         color: white;
 
+        & {
+          cursor: pointer;
+        }
+
         i {
           font-size: 25px;
         }

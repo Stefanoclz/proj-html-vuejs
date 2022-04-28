@@ -88,7 +88,7 @@ section {
 
   .date {
     width: calc(100% / 2);
-    background-color: #1a1a1a;
+    background-image: url(@/assets/data/img/sfondo3.jpg);
     padding: 100px 0px;
     height: 100%;
 

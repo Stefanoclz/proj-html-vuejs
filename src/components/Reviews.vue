@@ -152,4 +152,8 @@ section {
 .phrase {
   min-height: 80px;
 }
+
+button {
+  cursor: pointer;
+}
 </style>

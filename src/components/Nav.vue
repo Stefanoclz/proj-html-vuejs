@@ -83,6 +83,7 @@ nav {
     color: white;
     padding: 10px 15px;
     border: none;
+    cursor: pointer;
   }
 }
 
@@ -97,5 +98,9 @@ nav {
 .logo {
   width: 15%;
   margin: 0px 10px;
+}
+
+a:hover {
+  color: yellowgreen;
 }
 </style>
