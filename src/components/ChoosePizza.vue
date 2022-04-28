@@ -13,17 +13,17 @@
         <img src="@/assets/data/svg/svg-4.svg" alt="pizza slice" />
       </a>
     </div>
-    <PizzaSlider />
+    <Slider />
   </section>
 </template>
 
 <script>
-import PizzaSlider from "@/components/PizzaSlider.vue";
+import Slider from "@/components/Slider.vue";
 
 export default {
   name: "choosePizza",
   components: {
-    PizzaSlider,
+    Slider,
   },
 };
 </script>
