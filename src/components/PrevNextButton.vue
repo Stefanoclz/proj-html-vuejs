@@ -1,7 +1,7 @@
 <template>
   <div>
-    <button class="btn-left" @click="prevImage">PREV</button>
-    <button class="btn-right" @click="nextImage">NEXT</button>
+    <button class="btn-left" @click="prevImage"><h4>PREV</h4></button>
+    <button class="btn-right" @click="nextImage"><h4>NEXT</h4></button>
   </div>
 </template>
 
@@ -23,6 +23,10 @@ export default {
 h4 {
   color: #d34523;
   margin-bottom: 10px;
+}
+
+button {
+  transition: background-color 0.2s ease-in;
 }
 
 .btn-right {
@@ -49,5 +53,10 @@ h4 {
   font-size: 10px;
   background-color: white;
   width: 60px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: lightgray;
 }
 </style>

@@ -73,5 +73,6 @@ header {
 
 img {
   margin: 25px 0px;
+  max-height: 400px;
 }
 </style>

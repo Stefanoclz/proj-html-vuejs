@@ -64,21 +64,29 @@ section {
   .card {
     width: calc(100% / 4);
     height: 400px;
+    position: relative;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top;
+      opacity: 100%;
+      transition: opacity 0.3s ease-in;
     }
   }
   .container {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    display: none;
+    opacity: 0%;
     background-color: #d2401e;
+    display: flex;
     align-self: center;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transition: opacity 0.2s ease-in;
   }
   .bio {
     color: white;
@@ -98,9 +106,10 @@ section {
 }
 
 .card:hover img {
-  display: none;
+  opacity: 0%;
 }
 .card:hover .container {
-  display: flex;
+  opacity: 100%;
+  cursor: pointer;
 }
 </style>

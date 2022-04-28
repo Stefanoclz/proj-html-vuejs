@@ -167,4 +167,12 @@ export default {
     width: 250px;
   }
 }
+
+.nomePizza {
+  color: #c5a662;
+}
+
+.prezzo {
+  color: #d24220;
+}
 </style>

@@ -6,11 +6,12 @@
     <div class="mid-nav">
       <ul>
         <li>
-          <img src="@/assets/data/svg/svg-0.svg" alt="baffo" />
-          HOME
+          <a href="#"
+            ><img src="@/assets/data/svg/svg-0.svg" alt="baffo" /> HOME</a
+          >
         </li>
-        <li>PAGES</li>
-        <li>MENU</li>
+        <li><a href="#">PAGES</a></li>
+        <li><a href="#">MENU</a></li>
       </ul>
       <img
         class="logo"
@@ -18,15 +19,21 @@
         alt="Don Peppe"
       />
       <ul>
-        <li>EVENT</li>
-        <li>BLOG</li>
-        <li>LANDING</li>
+        <li><a href="#">EVENT</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">LANDING</a></li>
       </ul>
     </div>
     <div class="right-nav">
       <ul>
-        <li><img src="@/assets/data/svg/svg-1.svg" alt="cart" /> CART</li>
-        <li><i class="fa-solid fa-magnifying-glass"></i>SEARCH</li>
+        <li>
+          <a href="#"
+            ><img src="@/assets/data/svg/svg-1.svg" alt="cart" /> CART</a
+          >
+        </li>
+        <li>
+          <a href="#"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -51,6 +58,12 @@ nav {
     li {
       display: inline-block;
       margin: 0px 15px;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
       img {
         width: 20px;
         filter: invert(100%);

@@ -55,7 +55,11 @@
         </div>
       </div>
 
-      <img src="@/assets/data/svg/svg-4.svg" alt="pizza slice" />
+      <div class="slice">
+        <a href="#">
+          <img src="@/assets/data/svg/svg-4.svg" alt="pizza slice" />
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -88,6 +92,7 @@ section {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    position: relative;
 
     h1 {
       font-size: 30px;
@@ -125,6 +130,22 @@ section {
       align-self: flex-end;
       margin: 30px;
     }
+  }
+}
+.slice {
+  background-color: #f6f7f2;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  right: 20px;
+  top: 70%;
+  img {
+    width: 20px;
   }
 }
 </style>

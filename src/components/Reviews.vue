@@ -3,6 +3,7 @@
     <div class="container">
       <i class="fa-solid fa-quote-left"></i>
       <div
+        class="phrase"
         v-for="(review, index) in reviews"
         :key="index"
         v-show="reviewId === index"
@@ -17,7 +18,9 @@
       </div>
     </div>
     <PrevNextButton @goBack="PrevReview" @goForward="NextReview" />
-    <img src="@/assets/data/svg/svg-4.svg" alt="pizza slice" />
+    <a href="#">
+      <img src="@/assets/data/svg/svg-4.svg" alt="pizza slice" />
+    </a>
   </section>
 </template>
 
@@ -75,7 +78,7 @@ export default {
       this.reviewId = x;
     },
     ReviewAutoPlay() {
-      this.clock = setInterval(this.NextReview, 5000);
+      this.clock = setInterval(this.NextReview, 7000);
     },
   },
   mounted() {
@@ -99,6 +102,7 @@ section {
     row-gap: 10px;
     width: 40%;
     margin: 50px auto;
+    max-height: 150px;
 
     i {
       font-size: 80px;
@@ -137,10 +141,15 @@ section {
     background-color: #e4e4d4;
   }
 
-  img {
-    width: 20px;
+  a {
     align-self: flex-end;
-    margin: 30px;
+    img {
+      width: 20px;
+      margin: 30px;
+    }
   }
+}
+.phrase {
+  min-height: 80px;
 }
 </style>
