@@ -84,6 +84,11 @@ nav {
     padding: 10px 15px;
     border: none;
     cursor: pointer;
+
+    &:hover {
+      background-color: crimson;
+      transition: 0.5s ease-in;
+    }
   }
 }
 

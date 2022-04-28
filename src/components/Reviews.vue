@@ -129,6 +129,15 @@ section {
         height: 10px;
         border: none;
         margin-bottom: 10px;
+        cursor: pointer;
+        transition: height 0.2s ease-in;
+        transition: width 0.2s ease-in;
+
+        &:hover {
+          width: 10px;
+          height: 10px;
+          border: 1px solid grey;
+        }
       }
     }
   }
@@ -151,9 +160,5 @@ section {
 }
 .phrase {
   min-height: 80px;
-}
-
-button {
-  cursor: pointer;
 }
 </style>

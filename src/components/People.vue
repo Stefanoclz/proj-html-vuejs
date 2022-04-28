@@ -40,13 +40,13 @@ export default {
           id: 2,
         },
         {
-          link: "3a",
+          link: "4a",
           name: "JASON COOPER",
           role: "Chef",
           id: 3,
         },
         {
-          link: "4a",
+          link: "3a",
           name: "ESTELLE LAMBERT",
           role: "Chief Operator",
           id: 4,
