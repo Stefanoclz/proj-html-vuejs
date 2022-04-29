@@ -74,7 +74,10 @@ header {
 }
 
 .container {
-  background-color: url(@/assets/data/img/h3-rev-img-5.png);
+  background-image: url(@/assets/data/img/h3-rev-img-5.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
 }
 
 img {
