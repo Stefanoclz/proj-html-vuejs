@@ -8,50 +8,17 @@
             <div class="findUs">
               <h3>FIND OUR RESTAURANTS</h3>
 
-              <div>
-                <p>1614 E. Bell Rd #104.</p>
-                <p>Salerno, AZ 58022</p>
-                <p>(602)867-1010</p>
-              </div>
-
-              <div>
-                <p>204 E. Pizzetta Tommaso</p>
-                <p>Salerno, AZ 58022</p>
-                <p>(358)867-1010</p>
-              </div>
-
-              <div>
-                <p>Vale Puglia 54</p>
-                <p>Torre Del Greco, AZ 58022</p>
-                <p>(359)867-1010</p>
-              </div>
-
-              <div>
-                <p>Corso Itali AA</p>
-                <p>Naples, AZ 58022</p>
-                <p>(989)867-1010</p>
+              <div v-for="(info, index) in allRestaurants" :key="index">
+                <p>{{ info.address }}</p>
+                <p>{{ info.country }}</p>
+                <p>{{ info.phone }}</p>
               </div>
             </div>
             <div class="hours">
               <h3>WORKING HOURS</h3>
-              <div>
-                <h5>MONDAY</h5>
-                <h6>Kitchen Closed</h6>
-              </div>
-
-              <div>
-                <h5>TUSEDAY UNTIL FRIDAY</h5>
-                <p>9:00 - 22:00</p>
-              </div>
-
-              <div>
-                <h5>SATURDAY</h5>
-                <p>Saturday 11am to midnight</p>
-              </div>
-
-              <div>
-                <h5>SUNDAY</h5>
-                <p>09:00 - 22:00</p>
+              <div v-for="(day, index) in workinHours" :key="index">
+                <h5>{{ day.day }}</h5>
+                <h6>{{ day.detail }}</h6>
               </div>
 
               <div class="social">
@@ -89,6 +56,50 @@ export default {
   components: {
     Form,
   },
+  data() {
+    return {
+      allRestaurants: [
+        {
+          address: "1614 E. Bell Rd #104.",
+          country: "Salerno, AZ 58022",
+          phone: "(602)867-1010",
+        },
+        {
+          address: "204 E. Pizzetta Tommaso",
+          country: "Salerno, AZ 58022",
+          phone: "(358)867-1010",
+        },
+        {
+          address: "Vale Puglia 54",
+          country: "Torre Del Greco, AZ 58022",
+          phone: "(359)867-1010",
+        },
+        {
+          address: "Corso Itali AA",
+          country: "Naples, AZ 58022",
+          phone: "(989)867-1010",
+        },
+      ],
+      workinHours: [
+        {
+          day: "MONDAY",
+          detail: "Kitchen Closed",
+        },
+        {
+          day: "TUSEDAY UNTIL FRIDAY",
+          detail: "9:00 - 22:00",
+        },
+        {
+          day: "SATURDAY",
+          detail: "Saturday 11am to midnight",
+        },
+        {
+          day: "SUNDAY",
+          detail: "09:00 - 22:00",
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -107,13 +118,14 @@ export default {
 
     .links {
       display: flex;
-      column-gap: 100px;
+      column-gap: 120px;
 
       .findUs,
       .hours {
         display: flex;
         flex-direction: column;
         row-gap: 20px;
+        width: 250px;
 
         h3,
         h5 {
@@ -127,6 +139,9 @@ export default {
 
       h2 {
         margin: 0px 40px;
+      }
+      p {
+        font-size: 15px;
       }
     }
 

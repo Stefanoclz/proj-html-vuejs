@@ -12,44 +12,14 @@
           aperiam!
         </p>
 
-        <div class="combos">
+        <div class="combos" v-for="(food, index) in menu" :key="index">
           <div class="price">
-            <h3>$10</h3>
+            <h3>{{ food.price }}</h3>
           </div>
           <div class="text">
-            <h3>COMBO PICCOLO</h3>
+            <h3>{{ food.name }}</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-              cumque ut dicta animi perspiciatis at similique impedit
-              necessitatibus aperiam!
-            </p>
-          </div>
-        </div>
-
-        <div class="combos">
-          <div class="price">
-            <h3>$10</h3>
-          </div>
-          <div class="text">
-            <h3>COMBO MEZZO</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-              cumque ut dicta animi perspiciatis at similique impedit
-              necessitatibus aperiam!
-            </p>
-          </div>
-        </div>
-
-        <div class="combos">
-          <div class="price">
-            <h3>$10</h3>
-          </div>
-          <div class="text">
-            <h3>COMBO GRANDE</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
-              cumque ut dicta animi perspiciatis at similique impedit
-              necessitatibus aperiam!
+              {{ food.description }}
             </p>
           </div>
         </div>
@@ -67,6 +37,33 @@
 <script>
 export default {
   name: "sectionItem",
+  data() {
+    return {
+      menu: [
+        {
+          price: "$10",
+          name: "COMBO PICCOLO",
+          description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
+              cumque ut dicta animi perspiciatis at similique impedit
+              necessitatibus aperiam!`,
+        },
+        {
+          price: "$20",
+          name: "COMBO MEZZO",
+          description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
+              cumque ut dicta animi perspiciatis at similique impedit
+              necessitatibus aperiam!`,
+        },
+        {
+          price: "$30",
+          name: "COMBO GRANDE",
+          description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic
+              cumque ut dicta animi perspiciatis at similique impedit
+              necessitatibus aperiam!`,
+        },
+      ],
+    };
+  },
 };
 </script>
 
