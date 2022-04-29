@@ -106,6 +106,10 @@ section {
         display: flex;
         column-gap: 20px;
 
+        p {
+          font-size: 13px;
+        }
+
         .price {
           color: #ac432a;
         }
