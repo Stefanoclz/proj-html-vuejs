@@ -5,13 +5,16 @@
     </div>
     <div class="mid-nav">
       <ul>
-        <li>
+        <li v-for="(item, index) in firstList" :key="index">
           <a href="#"
-            ><img src="@/assets/data/svg/svg-0.svg" alt="baffo" /> HOME</a
+            ><img
+              src="@/assets/data/svg/svg-0.svg"
+              alt="baffo"
+              v-if="item.thereIsImg === true"
+            />
+            {{ item.value }}</a
           >
         </li>
-        <li><a href="#">PAGES</a></li>
-        <li><a href="#">MENU</a></li>
       </ul>
       <img
         class="logo"
@@ -19,9 +22,9 @@
         alt="Don Peppe"
       />
       <ul>
-        <li><a href="#">EVENT</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">LANDING</a></li>
+        <li v-for="(item, index) in secondList" :key="index">
+          <a href="#">{{ item.value }}</a>
+        </li>
       </ul>
     </div>
     <div class="right-nav">
@@ -53,6 +56,31 @@ export default {
   data() {
     return {
       onSearch: false,
+      firstList: [
+        {
+          value: "HOME",
+          thereIsImg: true,
+        },
+        {
+          value: "PAGES",
+          thereIsImg: false,
+        },
+        {
+          value: "MENU",
+          thereIsImg: false,
+        },
+      ],
+      secondList: [
+        {
+          value: "EVENT",
+        },
+        {
+          value: "BLOG",
+        },
+        {
+          value: "LANDING",
+        },
+      ],
     };
   },
   methods: {

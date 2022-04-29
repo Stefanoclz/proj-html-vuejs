@@ -39,6 +39,17 @@ section {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+
+  h6 {
+    color: #d65131;
+  }
+
+  h1 {
+    font-weight: 800;
+  }
+  p {
+    color: grey;
+  }
 }
 
 .slice {
