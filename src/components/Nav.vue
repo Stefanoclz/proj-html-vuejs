@@ -32,7 +32,15 @@
           >
         </li>
         <li>
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a>
+          <input
+            type="text"
+            placeholder="Search"
+            v-if="onSearch"
+            @mouseleave="hideTextBar"
+          />
+          <a href="#" v-else @click="showTextBar"
+            ><i class="fa-solid fa-magnifying-glass"></i>SEARCH</a
+          >
         </li>
       </ul>
     </div>
@@ -42,6 +50,19 @@
 <script>
 export default {
   name: "navItem",
+  data() {
+    return {
+      onSearch: false,
+    };
+  },
+  methods: {
+    showTextBar() {
+      this.onSearch = true;
+    },
+    hideTextBar() {
+      this.onSearch = false;
+    },
+  },
 };
 </script>
 
@@ -72,6 +93,10 @@ nav {
       i {
         transform: scaleX(-1);
         margin: 0px 5px;
+      }
+
+      input {
+        width: 80px;
       }
     }
   }
