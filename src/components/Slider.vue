@@ -99,11 +99,7 @@ export default {
       this.Pressed = false;
     },
     checkLimit() {
-      /*let slider = document.querySelector(".slider");*/
       let innerSlider = document.querySelector(".slider-inner");
-      /*let outer = slider.getBoundingClientRect();
-      let inner = innerSlider.getBoundingClientRect();*/
-
       if (parseInt(innerSlider.style.left) > 0) {
         innerSlider.style.left = "0px";
       } else if (parseInt(innerSlider.style.left) < -420) {
