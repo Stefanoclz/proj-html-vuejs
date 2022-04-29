@@ -1,31 +1,10 @@
 <template>
   <section>
-    <div class="card">
-      <img src="@/assets/data/img/h3-img-1.jpg" alt="restaurant" />
-      <div class="detail">
-        <div class="circle">
-          <i class="fa-regular fa-eye"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/data/img/h3-img-2.jpg" alt="Eat Good Pizza" />
-      <div class="detail">
-        <div class="circle">
-          <i class="fa-regular fa-eye"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/data/img/h3-img-3.jpg" alt="Yum" />
-      <div class="detail">
-        <div class="circle">
-          <i class="fa-regular fa-eye"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img src="@/assets/data/img/h3-img-4.jpg" alt="Bigger pizza" />
+    <div class="card" v-for="element in images" :key="element.id">
+      <img
+        :src="require(`@/assets/data/img/h3-img-${element.id}.jpg`)"
+        :alt="element.alt"
+      />
       <div class="detail">
         <div class="circle">
           <i class="fa-regular fa-eye"></i>
@@ -38,6 +17,28 @@
 <script>
 export default {
   name: "placeItem",
+  data() {
+    return {
+      images: [
+        {
+          id: "1",
+          alt: "restaurant",
+        },
+        {
+          id: "2",
+          alt: "Eat Good Pizza",
+        },
+        {
+          id: "3",
+          alt: "Yum",
+        },
+        {
+          id: "4",
+          alt: "Bigger pizza",
+        },
+      ],
+    };
+  },
 };
 </script>
 

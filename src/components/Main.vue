@@ -7,20 +7,11 @@
     <People />
     <div class="sponsor">
       <div class="container">
-        <div class="brand">
-          <img src="@/assets/data/img/h1-clients-img-4.png" alt="Cowboy" />
-        </div>
-        <div class="brand">
-          <img src="@/assets/data/img/h1-clients-img-3.png" alt="Gordon" />
-        </div>
-        <div class="brand">
-          <img src="@/assets/data/img/h1-clients-img-1.png" alt="Big Cheese" />
-        </div>
-        <div class="brand">
-          <img src="@/assets/data/img/h1-clients-img-2.png" alt="Bludoos Bar" />
-        </div>
-        <div class="brand">
-          <img src="@/assets/data/img/h1-clients-img-5.png" alt="Vegan" />
+        <div class="brand" v-for="(logo, index) in brandsLogos" :key="index">
+          <img
+            :src="require(`@/assets/data/img/h1-clients-img-${logo.id}.png`)"
+            :alt="logo.alt"
+          />
         </div>
       </div>
     </div>
@@ -48,6 +39,32 @@ export default {
     People,
     ChoosePizza,
     Events,
+  },
+  data() {
+    return {
+      brandsLogos: [
+        {
+          id: "4",
+          alt: "Cowboy",
+        },
+        {
+          id: "3",
+          alt: "Gordon",
+        },
+        {
+          id: "1",
+          alt: "Big Cheese",
+        },
+        {
+          id: "2",
+          alt: "Bludoos Bar",
+        },
+        {
+          id: "5",
+          alt: "Vegan",
+        },
+      ],
+    };
   },
 };
 </script>

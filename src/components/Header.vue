@@ -71,6 +71,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  min-width: 600px;
 }
 
 .container {
